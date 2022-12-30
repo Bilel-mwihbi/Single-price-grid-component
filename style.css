@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+:root {
+    --cyan:hsl(179, 62%, 43%);
+    --bright-yellow:hsl(71, 73%, 54%);
+    --light-gray:hsl(204, 43%, 93%);
+    --grayish-blue:hsl(218, 22%, 67%);
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    min-height: 100vh;
+}
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+button {
+    font: inherit;
+}
+ul {
+    list-style-type: none;
+}
+body {
+    font-family: 'Karla', sans-serif;
+    font-size: 1rem;
+}
+/* layout */
+main {
+    display: grid;
+    min-height: 100vh;
+}
+/* components */
+main div{
+
+    padding: 1.5em;
+
+}
+main div > * {
+    margin-block: 16px;
+}
+/* introduction */
+.introduction h1 {
+    font-size: 1.5rem;
+    color: var(--cyan);
+}
+.introduction h2 {
+    font-size: 1.2rem;
+    line-height: 1.1;
+    color: var(--bright-yellow);
+}
+.introduction p {
+    
+    color: var(--grayish-blue);
+}
+/* subscription */
+.subscription {
+    background-color: var(--cyan);
+}
+.subscription > * {
+    color: var(--light-gray);
+}
+.subscription li {
+    margin-block: 16px;
+}
+.subscription li:first-child {
+    color: var(--grayish-blue);
+}
+.subscription span {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--light-gray);
+}
+
+.subscription button {
+    min-width: 100%;
+    padding: 1em;
+    text-align: center;
+    color: inherit;
+    border-radius: 8px;
+    background-color: var(--bright-yellow);
+    border-style: none;
+}
+.subscription button:hover {
+    -moz-box-shadow: 0px 6px 16px -8px var(--grayish-blue);
+    -webkit-box-shadow: 0px 6px 16px -8px var(--grayish-blue);
+    box-shadow: 0px 6px 16px -8px var(--grayish-blue);
+}
+/* why-us*/
+.why-us {
+    background-color: var(--cyan);
+    opacity: 0.85;
+}
+.why-us h2 {
+    color: var(--light-gray);
+}
+.why-us li {
+    color: var(--light-gray);
+}
+@media only screen and (min-width: 768px) { 
+    main {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "introduction introduction" "subscription why-us";
+    }
+    .introduction {
+        grid-area: introduction;
+    }
+    .subscription {
+        grid-area: subscription;
+    }
+    .why-us {
+        grid-area: why-us;
+    }
+   
+}
