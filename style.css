@@ -58,6 +58,8 @@ body {
 }
 main {
     display: grid;
+    border-radius: 10px;
+    overflow: hidden;
     -moz-box-shadow: 0px 0px 30px -5px var(--grayish-blue);
     -webkit-box-shadow: 0px 0px 30px -5px var(--grayish-blue);
     box-shadow: 0px 0px 30px -5px var(--grayish-blue);
@@ -98,9 +100,6 @@ main div > * {
 .subscription {
     background-color: var(--cyan);
 }
-.subscription li:first-child {
-    color: var(--grayish-blue);
-}
 .subscription span {
     font-size: 2.5rem;
     font-weight: 700;
@@ -111,17 +110,18 @@ main div > * {
     4-1 button 
   *****************
 */
-.subscription button {
+.button {
+    display: inline-block;
     min-width: 100%;
     padding: 1em;
     margin-top: 2em;
     text-align: center;
-    color: inherit;
     border-radius: 8px;
+    text-decoration: none;
+    color: inherit;
     background-color: var(--bright-yellow);
-    border-style: none;
 }
-.subscription button:hover {
+.button:hover {
     -moz-box-shadow: 0px 7px 27px -10px var(--grayish-blue);
     -webkit-box-shadow: 0px 7px 27px -10px var(--grayish-blue);
     box-shadow: 0px 7px 27px -10px var(--grayish-blue);
